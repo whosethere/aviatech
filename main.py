@@ -50,6 +50,12 @@ def detect_landing_takeoff_with_details(data, altitude_drop_threshold, speed_dro
 def read_root():
     return {"Hello": "World"}
 
+@app.get("/hello")
+def read_hello():
+    return {"Hello": "World"}
+
+
+
 @app.post("/uploadfile/")
 async def create_upload_file(file: UploadFile):
     df = pd.read_csv(file.file)
